@@ -17,7 +17,7 @@
     - `num-cores default = 1`
 
 ##### Ερώτημα 2:
-1. Μετά από αναζητηση στο αρχείο config.ini μπορούμε να επιβεβαιώσουμε τα παρακάτω χαρακτηριστικά
+1. Μετά από αναζητηση στο αρχείο [config.ini](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/config.ini) μπορούμε να επιβεβαιώσουμε τα παρακάτω χαρακτηριστικά
     - Line 65: `type = MinorCPU`
     - Line 1652: `voltage = 3.3V`
     - Line 44: `clock = 1000`, δηλαδή 1/1000 ticks = 1/[10^(-9)] = 1GHz
