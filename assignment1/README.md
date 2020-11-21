@@ -39,19 +39,19 @@ In-Order μοντέλα CPU, των οποίων κάνει χρήση ο gem5:
 - High-Performance In-order (HPI) CPU:
 Το μοντέλο αυτό είναι βασισμένο στην αρχιτεκτονική Arm και το ονομάζουμε HPI. To HPI CPU timing model ρυθμίζεται για να αντιπροσωπεύει μια μοντέρνα in-order Armv8-A εφαρμογή. Το pipeline του HPI CPU χρησιμοποιεί το ίδιο four-stage μοντέλο όπως ο MinorCPU που αναφέραμε προηγουμένως.
 
-1. Σημείωνουμε πως για τους σκοπούς των παρακάτω υποερωτημάτων έγινε χρήση ενός απλού προγράμματος C, το οποίο υπολογίζει και εμφανίζει τους δέκα πρώτους αριθμούς.  
+1. Για τους σκοπούς των παρακάτω υποερωτημάτων έγινε χρήση ενός απλού προγράμματος C (βλ. [Task 3/prime_numbers.c](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/prime_numbers.c)) το οποίο υπολογίζει και εμφανίζει τους πρώτους δέκα πρώτους αριθμούς. Παρακάτω παραθέτουμε τους χρόνους εκτέλεσης από το [Task 3/3a_MinorCPU/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/3a_MinorCPU/stats.txt) και [Task 3/3a_TimingSimpleCPU/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/3a_TimingSimpleCPU/stats.txt) αντίστοιχα:    
     - MinorCPU
       Line 12:	`sim_seconds	0.000057	# Number of seconds simulated`
     - TimingSimpleCPU
       Line 12:	`sim_seconds	0.000083	# Number of seconds simulated`
 2. Ο χρόνος στην περίπτωση του TimingSimpleCPU είναι μεγαλύτερος από την περίπτωση του MinorCPU. Αυτό συμβαίνει διότι στην περίπτωση του TimingSimpleCPU περιμένει την προσπέλαση μνήμης να τελειώσει πριν συνεχίσει ενώ δεν υποστηρίζει pipeline. Από την άλλη, το MinorCPU έχει pipeline τεσσάρων σταδίων. Επίσης, παρατηρούμε ότι οι κύκλοι που προσομοιώθηκαν στην περίπτωση του MinorCPU είναι 113218 ενώ στον TimingSimpleCPU είναι 165590. Αυτό συμβαίνει γιατί όπως αναφέραμε στην περίπτωση του Timing memory access απαιτούνται πολλαπλοί κύκλοι.
-3. Πρώτα κάνουμε προσομείωση με συχνότητα 500MHz με την εντολή `--sys-clock=500000000`
+3. Αρχικά κάνουμε προσομείωση με συχνότητα 500MHz με την εντολή `--sys-clock=500000000`. Τα ζητούμενα stats αρχεία για το MinorCPU και το TimingSimpleCPU βρίσκονται στα [Task 3/3c_MinorCPU/Clock_500Mhz/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/3c_MinorCPU/Clock_500Mhz/stats.txt) και [Task 3/3c_TimingSimpleCPU/Clock_500MHz/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/tree/main/assignment1/Task%203/3c_TimingSimpleCPU/Clock_500MHz/stats.txt) αντίστοιχα:
     - MinorCPU
       Line 12:	`sim_seconds	0.000064	# Number of seconds simulated`
     - TimingSimpleCPU
       Line 12:	`sim_seconds	0.000089	# Number of seconds simulated`
  Όπως βλέπουμε οι χρόνοι εκτέλεσης αυξήθηκαν πράγμα λογικό αφού μειώσαμε τη συχνότητα από 1GHz που ήταν προηγουμένως.  
-Τώρα αλλάζουμε τη τεχνολογία της μνήμης σε DDR3_2133_8x8 με την εντολή `--mem-type=DDR3_2133_8x8`
+Τώρα αλλάζουμε τη τεχνολογία της μνήμης σε DDR3_2133_8x8 με την εντολή `--mem-type=DDR3_2133_8x8`. Από τα [Task 3/3c_MinorCPU/DDR3_2133_8x8/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/3c_MinorCPU/DDR3_2133_8x8/stats.txt) και [Task 3/3c_TimingSimpleCPU/DDR3_2133_8x8/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%203/3c_TimingSimpleCPU/DDR3_2133_8x8/stats.txt) έχουμε:
     - MinorCPU
      Line 12:	`sim_seconds	0.000055	# Number of seconds simulated`
     - TimingSimpleCPU
