@@ -17,7 +17,7 @@
     - `num-cores default = 1`
 
 ##### Ερώτημα 2:
-1. Μετά από αναζητηση στο αρχείο [config.ini](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/config.ini) μπορούμε να επιβεβαιώσουμε τα παρακάτω χαρακτηριστικά
+1. Μετά από αναζήτηση στο αρχείο [Tasks 1 and 2/config.ini](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/config.ini) μπορούμε να επιβεβαιώσουμε τα παρακάτω χαρακτηριστικά
     - Line 65: `type = MinorCPU`
     - Line 1652: `voltage = 3.3V`
     - Line 44: `clock = 1000`, δηλαδή 1/1000 ticks = 1/[10^(-9)] = 1GHz
@@ -26,7 +26,7 @@
     - Line 20: `mem_mode = timing`
     - Line 1610: `type = CoherentXBar`
     - Line 113: `numThreads = 1`
-2. Ανατρέχοντας στο αρχείο stats.txt εντοπίζουμε στην γραμμή 715 πως ο αριθμός των commited εντολών, ή αλλιώς 'commited lines' είναι 479, για read and write.
+2. Ανατρέχοντας στο αρχείο [Tasks 1 and 2/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/stats.txt) εντοπίζουμε στην γραμμή 715 πως ο αριθμός των commited εντολών, ή αλλιώς 'commited lines' είναι 479, για read and write.
 
 ##### Ερώτημα 3
 In-Order μοντέλα CPU, των οποίων κάνει χρήση ο gem5:
