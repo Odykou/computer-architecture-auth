@@ -26,7 +26,7 @@
     - Line 20: `mem_mode = timing`
     - Line 1610: `type = CoherentXBar`
     - Line 113: `numThreads = 1`
-2. Ανατρέχοντας στο αρχείο [Task 1 and 2/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/stats.txt) εντοπίζουμε στην γραμμή 14 πως ο αριθμός των commited εντολών, ή αλλιώς 'commited instructions' είναι 5028.
+2. Ανατρέχοντας στο αρχείο [Task 1 and 2/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/stats.txt) εντοπίζουμε στην γραμμή 14 πως ο αριθμός των commited εντολών, ή αλλιώς 'commited instructions' είναι 5028. Όπως παρατηρούμε όμως στη γραμμή 15, οι εντολές που εκτελούνται (committed ops) είναι 5834. Ο λόγος που οι εντολές είναι περισσότερες είναι γιατί ο cpu κάνει ένα set-up για να συνδεθεί με εξωτερικά components. 
 
 3. Ανατρέχοντας στο αρχείο [Task 1 and 2/stats.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment1/Task%201%20and%202/stats.txt) εντοπίζουμε στην γραμμή 715 πως ο αριθμός που προσπελάστηκε η L2 για read and write είναι 479.
 
