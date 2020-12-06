@@ -24,7 +24,12 @@
 
 ##### Ερώτημα 2:
 Από τα αντίστοιχα αρχεία stats.txt για κάθε πρότυπο αρεικρισίας / benchmark, εξάγουμε τα στοιχεία που παρουσιάζονται στα παρακάτω διαγράμματα:
-    // to be filled
+    ![sim_seconds](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
+    ![cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/cpi.png)
+    ![dcache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/cpi.png)
+    ![icache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
+    ![l2cache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
+    
 
 ##### Ερώτημα 3
 Το `system.clk_domain.clock` δηλαδή το ρολόι συγχρονισμού του συστήματος είναι ίδιο και στις δύο περιπτώσεις και ίσο με 1000, δηλαδή 1 GHz. Το ρολόι αυτό ρυθμίζει το ρολόι του συστήματος συμπεριλαμβανομένου του memory controller, του memory bus και του DVFS (Dynamic Voltage and Frequency Scaling) handler.
@@ -45,7 +50,7 @@
 - L1 Instruction Cache Associativity: 2, 4, 8
 - L2 Cache Associativity: 4, 8
 - Cache Line Size: 32 Bytes, 64 Bytes, 128 Bytes 
-Για την αυτοματοποιημένη εκτέλεση των εντολών, έγινε χρήση του bash script run.sh . Παρακάτω βλέπουμε τις δοκιμές για το κάθε benchmark, με τα παραμέτρους της καθεμιάς.
+Για την αυτοματοποιημένη εκτέλεση των εντολών, έγινε χρήση του bash script [run.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/run.sh) . Παρακάτω βλέπουμε τις δοκιμές για το κάθε benchmark, με τα παραμέτρους της καθεμιάς.
 
 | Benchmarks   | L1\_dcache\_size | L1\_icache\_size | L2\_cache\_size | L1\_dcache\_assoc | L1\_icache\_assoc | L2\_cache\_assoc | cacheline\_size |
 | ------------ | ---------------- | ---------------- | --------------- | ----------------- | ----------------- | ---------------- | --------------- |
@@ -79,16 +84,16 @@
 | speclibm\_4  | 128              | 32               | 4096            | 4                 | 2                 | 8                | 128             |
 
 ##### Ερώτημα 2
-Η ανάκτηση των ζητούμενων δεδομένων έγινε με την χρήση του bash script που δώθηκε, το read_results.sh, καθώς και του conf_script.ini, που συγκεντρώνουν τα απαραίτητα αποτελέσματα στο Results.txt. Παραθέτουμε τα εξής διαγράμματα:
-//to be filled
+Η ανάκτηση των ζητούμενων δεδομένων έγινε με την χρήση του bash script που δώθηκε, το [read_results.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/read_results.sh), καθώς και του [conf_script.ini](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/conf_script.ini), που συγκεντρώνουν τα απαραίτητα αποτελέσματα στο [Results.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/Results.txt). Παραθέτουμε τα εξής διαγράμματα:
+![specbzip_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specbiz_cpi.png)
 - specbzip: Όπως φαίνεται από τα δεδομένα, μια αύξηση του μεγέθους τόσο της L1 dcache όσο και της L2 cache φέρνει μια μικρή αύξηση της απόδοσης (μείωση του CPI). Η αύξηση του associativity, δε φαίνεται να φέρνει ουσιαστική αύξηση της απόδοσης.
-
+![specmcf_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specmcf_cpi.png)
 - specmcf: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση της L1 icache, πράγμα που μείωσε και το miss rate της.
-
+![spechmmer_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/spechmmer_cpi.png)
 - spechmmer: Επειδή η απόδοση παραμένει ουσιαστικά σταθερή και επειδή παρατηρούμε σημαντικό miss rate για την L2, μπορούμε να διατηρήσουμε μικρές σε μέγεθος τις L1d και L2, καθώς και το associativity της L2
-
+![specsjeng_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specsjeng_cpi.png)
 - specsjeng: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση του cache line size.
-
+![speclibm_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/speclibm_cpi.png)
 - speclibm: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση του cache line size.
 
 #### ΒΗΜΑ ΤΡΙΤΟ
