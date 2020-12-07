@@ -24,11 +24,11 @@
 
 ##### Ερώτημα 2:
 Από τα αντίστοιχα αρχεία stats.txt για κάθε πρότυπο αρεικρισίας / benchmark, εξάγουμε τα στοιχεία που παρουσιάζονται στα παρακάτω διαγράμματα:
-    ![sim_seconds](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
+    ![sim_seconds](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/sim_seconds.png)
     ![cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/cpi.png)
-    ![dcache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/cpi.png)
+    ![dcache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/dcache_miss_rate.png)
     ![icache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
-    ![l2cache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/icache_miss_rate.png)
+    ![l2cache_miss_rate](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/l2cache_miss_rate.png)
     
 
 ##### Ερώτημα 3
