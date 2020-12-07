@@ -45,7 +45,7 @@
 Με βάση το πρώτο μέρος, για τα πρότυπα αρεικρισίας / benchmarks του ερωτήματος 2 επιλέχθηκαν οι ακόλουθες τιμές:
 - L1 Data Cache Size: 64 kB, 128 kB
 - L1 Instruction Cache Size: 32 kB, 64 kB
-- L2 Cache Size: 1 MB, 2 MB, 3 MB, 4 MB
+- L2 Cache Size: 1 MB, 2 MB, 4 MB
 - L1 Data Cache Associativity: 2, 4, 8
 - L1 Instruction Cache Associativity: 2, 4, 8
 - L2 Cache Associativity: 4, 8
