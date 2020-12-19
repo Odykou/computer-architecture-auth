@@ -55,21 +55,21 @@
 | speclibm\_3  | 128              | 32               | 4096            | 4                 | 2                 | 8                | 64              |
 | speclibm\_4  | 128              | 32               | 4096            | 4                 | 2                 | 8                | 128             |
 
-Αρχικά έγινε μετατροπή των απαραίτητων δεδομένων του gem5, σε μορφή συμβατή με τον McPAT, με την χρήση του --insert file here-- και του bash script --insert file here--, και αποθήκευσή τους στον φάκελο --insert folder here--
-Έπειτα εκτελούμε το bash script --insert file here-- για εξαγωγή των ζητούμενων τιμών ισχύος, με είσοδο τα προαναφερθέντα αρχεία. Τα αρχεία αυτά αποθηκεύονται στον φάκελο --insert folder here--.
-Τέλος, τρέχουμε το bash script --insert file here-- για αποκόμιση των τελικών τιμών.
+Αρχικά έγινε μετατροπή των απαραίτητων δεδομένων του gem5, σε μορφή συμβατή με τον McPAT, με την χρήση του [GEM5toMcPAT.py](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/GEM5toMcPAT.py) και του bash script [GEM5toMcPAT.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/bash%20scripts/gem5toMcPAT.sh), και αποθήκευσή τους στον φάκελο [GEM5toMcPAT_results](https://github.com/SoreenDesu/computer-architecture-auth/tree/main/assignment3/gem5toMcPAT_results).
+Έπειτα εκτελούμε το bash script [runMcPAT.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/bash%20scripts/runMcPAT.sh) για εξαγωγή των ζητούμενων τιμών ισχύος, με είσοδο τα προαναφερθέντα αρχεία. Τα αρχεία αυτά αποθηκεύονται στον φάκελο [McPAT_results](https://github.com/SoreenDesu/computer-architecture-auth/tree/main/assignment3/McPAT_results).
+Τέλος, τρέχουμε το bash script [print_energy.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/bash%20scripts/print_energy.sh) για αποκόμιση των τελικών τιμών, που αποθηκεύονται στον φάκελο [final_results](https://github.com/SoreenDesu/computer-architecture-auth/tree/main/assignment3/final_results).
 
 Παρουσιάζουμε τα αποτελέσματα στα ακόλουθα διαγράμματα:
 - specbzip: Παρατηρούμε ότι η αύξηση του associativity της L1 dcache προκαλεί σημαντική μείωση της καταναλισκόμενης ενέργειας και κατά συνέπεια σημαντική μείωση του EDP. Επομένως, θα διατηρήσουμε το associativity της L1 dcache όσο μεγαλύτερο γίνεται, ενώ τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
-//diagram
+![specbzip_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specbzip_edp.png)
 - spechmmer: Εδώ παρατηρούμε ότι αύξηση του associativity της L1 dcache και μείωση του cacheline size προκαλούν αύξηση της απόδοσης. Θα αυξήσουμε το associativity της L1 dcache και τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
-//diagram
+![spechmmer_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/spechmmer_edp.png)
 - speclibm: Εδώ θα αυξήσουμε το cacheline size και το associativity της L1 dcache, ενώ τις υπόλοιπες παραμέτρους θα τις διατηρήσουμε όσο μικρότερες και φθηνότερες γίνεται.
-//diagram
+![speclbm_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/speclibm_edp.png)
 - specmcf: Εδώ διατηρούμε το associativity της L1 icache στην τιμή 4 και τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
-//diagram
+![specmcf_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specmcf_edp.png)
 - specsjeng: Εδώ θα αυξήσουμε το cacheline size και το associativity της L1 dcache, ενώ τις υπόλοιπες παραμέτρους θα τις διατηρήσουμε όσο μικρότερες και φθηνότερες γίνεται.
-//diagram
+![specsjeng_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specsjeng_edp.png)
 
 #### Κριτική Εργασίας
 - Θετικά στοιχεία:
