@@ -85,16 +85,17 @@
 
 ##### Ερώτημα 2
 Η ανάκτηση των ζητούμενων δεδομένων έγινε με την χρήση του bash script που δώθηκε, το [read_results.sh](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/read_results.sh), καθώς και του [conf_script.ini](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/conf_script.ini), που συγκεντρώνουν τα απαραίτητα αποτελέσματα στο [Results.txt](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/Step_2/Results.txt). Παραθέτουμε τα εξής διαγράμματα:
-![specbzip_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specbiz_cpi.png)
 - specbzip: Όπως φαίνεται από τα δεδομένα, μια αύξηση του μεγέθους τόσο της L1 dcache όσο και της L2 cache φέρνει μια μικρή αύξηση της απόδοσης (μείωση του CPI). Η αύξηση του associativity, δε φαίνεται να φέρνει ουσιαστική αύξηση της απόδοσης.
-![specmcf_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specmcf_cpi.png)
+![specbzip_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specbiz_cpi.png)
 - specmcf: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση της L1 icache, πράγμα που μείωσε και το miss rate της.
-![spechmmer_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/spechmmer_cpi.png)
+![specmcf_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specmcf_cpi.png)
 - spechmmer: Επειδή η απόδοση παραμένει ουσιαστικά σταθερή και επειδή παρατηρούμε σημαντικό miss rate για την L2, μπορούμε να διατηρήσουμε μικρές σε μέγεθος τις L1d και L2, καθώς και το associativity της L2
-![specsjeng_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specsjeng_cpi.png)
+![spechmmer_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/spechmmer_cpi.png)
 - specsjeng: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση του cache line size.
-![speclibm_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/speclibm_cpi.png)
+![specsjeng_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/specsjeng_cpi.png)
 - speclibm: Το μόνο που επέφερε ουσιαστική αύξηση της απόδοσης ήταν η αύξηση του cache line size.
+![speclibm_cpi](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment2/charts/speclibm_cpi.png)
+
 
 #### ΒΗΜΑ ΤΡΙΤΟ
 Η συνάρτηση κόστους που επιλέξαμε είναι: 
