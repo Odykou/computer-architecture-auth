@@ -61,14 +61,19 @@
 
 Παρουσιάζουμε τα αποτελέσματα στα ακόλουθα διαγράμματα:
 - specbzip: Παρατηρούμε ότι η αύξηση του associativity της L1 dcache προκαλεί σημαντική μείωση της καταναλισκόμενης ενέργειας και κατά συνέπεια σημαντική μείωση του EDP. Επομένως, θα διατηρήσουμε το associativity της L1 dcache όσο μεγαλύτερο γίνεται, ενώ τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
+![specbzip_pp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specbzip_pp.png)
 ![specbzip_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specbzip_edp.png)
 - spechmmer: Εδώ παρατηρούμε ότι αύξηση του associativity της L1 dcache και μείωση του cacheline size προκαλούν αύξηση της απόδοσης. Θα αυξήσουμε το associativity της L1 dcache και τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
+![spechmmer_pp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/spechmmer_pp.png)
 ![spechmmer_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/spechmmer_edp.png)
 - speclibm: Εδώ θα αυξήσουμε το cacheline size και το associativity της L1 dcache, ενώ τις υπόλοιπες παραμέτρους θα τις διατηρήσουμε όσο μικρότερες και φθηνότερες γίνεται.
+![speclibm_pp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/speclibm_pp.png)
 ![speclbm_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/speclibm_edp.png)
 - specmcf: Εδώ διατηρούμε το associativity της L1 icache στην τιμή 4 και τις υπόλοιπες παραμέτρους όσο μικρότερες και φθηνότερες γίνεται.
+![specmcf_pp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specmcf_pp.png)
 ![specmcf_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specmcf_edp.png)
 - specsjeng: Εδώ θα αυξήσουμε το cacheline size και το associativity της L1 dcache, ενώ τις υπόλοιπες παραμέτρους θα τις διατηρήσουμε όσο μικρότερες και φθηνότερες γίνεται.
+![specsjeng_pp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specsjeng_pp.png)
 ![specsjeng_edp](https://github.com/SoreenDesu/computer-architecture-auth/blob/main/assignment3/charts/specsjeng_edp.png)
 
 Τα αποτελέσματα του McPAT μπορεί να παρουσιάζουν σημαντικό σφάλμα είτε γιατί τα μοντέλα του δεν είναι πλήρη, είτε γιατί είναι πολύ υψηλού επιπέδου και δε λαμβάνουν υπόψη στοιχεία ελέγχου χαμηλής λογικής, είτε γιατί αντιπροσωπεύουν εφαρμογές διαφόρων δομών που διαφέρουν από αυτή του πυρήνα που έχουμε στη διάθεσή μας. Επιπλέον, ο McPAT δεν υπολογίζει την έξτρα ισχύ που απαιτείται λόγω miss στις cache. Επομένως, η χρήση  δύο  διαφορετικών  προγραμμάτων  για  την  εκτίμηση  διαφορετικών  πτυχών  του  ίδιου συστήματος θα μπορούσε να είναι πηγή επιπλέον σφαλμάτων εξαιτίας του διαφορετικού miss rate στην κάθε περίπτωση.
